@@ -1,0 +1,48 @@
+body{
+	margin: 0;
+}
+.navbar{
+	position: sticky;
+	height: 60px;
+	background-color: rgba(2,2,2,255);
+	color:rgba(255,255,255,255);
+}
+.navbar>h1{
+	float:left;
+	vertical-align: middle;
+	margin:0;
+	padding-left: 10px;
+	line-height: 60px;
+	font-size: 40px;
+}
+.menu-buttons{
+	float:right;
+	height: 60px;
+	border:none;
+	color:rgba(255,255,255,255);
+	background-color: rgba(2,2,2,255);
+	width:70px;
+}
+.menu-buttons:hover{
+	color:rgba(2,2,2,255);
+	background-color: rgba(255,255,255,255);
+}
+.parallax{
+    /* Set a specific height */
+    height: 500px;
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.bg1{
+	background-image: url("../img/spock");
+}
+.bg2{
+	background-image: url("../img/cassette.jpg");
+}
+.description{
+	height: 600px;
+}
