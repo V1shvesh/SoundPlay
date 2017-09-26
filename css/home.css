@@ -1,5 +1,13 @@
-@import url('https://fonts.googleapis.com/css?family=Libre+Barcode+39+Text|Megrim');
-
+/*@import url('https://fonts.googleapis.com/css?family=Libre+Barcode+39+Text|Megrim');*/
+/*@import url('./materialize.min.css');*/
+@font-face{
+	font-family: 'Barcode';
+	src:url(../fonts/barcode.ttf) format('truetype');
+}
+@font-face{
+	font-family: 'Megrim';
+	src:url(../fonts/megrim.ttf) format('truetype');
+}
 @font-face{
 	font-family: 'Raleway';
 	src:url(../fonts/Raleway-Regular.ttf) format('truetype');
@@ -26,23 +34,41 @@ body{
 	font-size: 40px;
 	font-family: Megrim,cursive;
 }
-.menu-buttons{
+.navbtn{
+	margin: 5px 5px;
 	float:right;
-	height: 60px;
+	height: 50px;
 	border:none;
 	color:rgba(255,255,255,255);
 	background-color: rgba(2,2,2,255);
-	width:120px;
+	width:150px;
 	padding: 0 20px;
 	transition-duration: 100ms;
+	outline: none;
+	font-size:100%;
+	border:2px solid white;
+	border-radius: 10px;
 }
-.menu-buttons:hover{
+.navbtn:hover{
 	color:rgba(2,2,2,255);
 	background-color: rgba(255,255,255,255);
 }
+.navbtn::-moz-focus-inner {
+   border: 0;
+}
+.navbtn:nth-child(1){
+	border-top-left-radius: 0;
+	border-bottom-left-radius: 0;
+	margin-left: -2px; 
+}
+.navbtn:nth-child(2){
+	border-top-right-radius: 0;
+	border-bottom-right-radius: 0;
+	margin-right: 0; 
+}
 .parallax{
     /* Set a specific height */
-    height: 500px;
+    min-height: 500px;
 
     /* Create the parallax scrolling effect */
     background-attachment: fixed;
@@ -62,6 +88,8 @@ body{
 	text-align: center;
 	background-color: rgba(200,200,200,255);
 }
-.description>h1{
-    font-family: 'Libre Barcode 39 Text', cursive;
+.desc-head{
+    font-family: 'Barcode', cursive;
+    font-size: 70px;
+    text-decoration: none;
 }
