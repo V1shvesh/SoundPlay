@@ -1,0 +1,44 @@
+@import url('./home.css');
+
+.playbar{
+	position: fixed;
+	bottom:0;
+	width: 100%;	
+	height: 60px;
+	background-color: rgba(2,2,2,255);
+	color:rgba(255,255,255,255);
+}
+.btn-wrapper{
+	height: 30px;
+	width: 30px;
+	position: relative;
+	perspective: 800px;
+}
+.toggle-play path{
+	fill: white;
+}
+.toggle-play{
+	height: 30px;
+	width: 30px;
+	margin:15px 10px;
+	position: absolute;
+	transform-style: preserve-3d;
+  	transition: transform 1s;
+}
+.toggle-play svg{
+	position: absolute;
+	display: block;
+	height:30px;
+	width:30px;
+	backface-visibility: hidden;
+	margin:0;
+	background-color: rgba(2,2,2,255);
+}
+.play{
+}
+.pause{
+	transform: rotateY(180deg);
+}
+.toggle-play.flipped{
+	transform: rotateY(180deg);
+}
