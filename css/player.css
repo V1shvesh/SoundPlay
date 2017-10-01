@@ -10,6 +10,7 @@
 	color:rgba(255,255,255,255);
 	display: inline-grid;
 	grid-template-columns:auto repeat(3,50px) 700px repeat(2,50px) auto;
+	box-shadow: 0px 0px 10px 0px black
 }
 .btn-wrapper{
 	height: 30px;
