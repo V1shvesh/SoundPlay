@@ -20,7 +20,7 @@ body{
 .navbar{
 	position: fixed;
 	top:0;
-	width: 100%;	
+	width: 100%;
 	height: 60px;
 	background-color: rgba(2,2,2,1);
 	color:rgba(255,255,255,255);
@@ -60,12 +60,12 @@ body{
 .navbtn:nth-child(1){
 	border-top-left-radius: 0;
 	border-bottom-left-radius: 0;
-	margin-left: -2px; 
+	margin-left: -2px;
 }
 .navbtn:nth-child(2){
 	border-top-right-radius: 0;
 	border-bottom-right-radius: 0;
-	margin-right: 0; 
+	margin-right: 0;
 }
 .parallax{
     /* Set a specific height */
@@ -100,7 +100,7 @@ body{
 	height: 0;
 	position: absolute;
 	border-left: 20px solid transparent;
-	border-right: 20px solid transparent;    
+	border-right: 20px solid transparent;
 	border-bottom: 20px solid rgba(255,255,255,1);
 }
 
@@ -154,7 +154,7 @@ input[type="password"]{
 	border-radius: 5px;
 	margin-bottom: 10px;
 	margin-top: 5px;
-	padding-left: 20px;
+	padding-left: 10px;
 }
 
 .submit-button{
@@ -163,7 +163,7 @@ input[type="password"]{
 	background: rgba(238,238,238,1);
 	Letter-spacing: 2px;
 	font-size: 16px;
-	border-radius: 3px;	
+	border-radius: 3px;
 	background-color: rgba(0,0,0,1);
 	outline: none;
 	color: rgba(255,255,255,1);
@@ -176,4 +176,3 @@ input[type="password"]{
 	color: rgba(2,2,2,1);
 	background-color: rgba(200,200,200,1);
 }
-
