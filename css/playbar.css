@@ -1,5 +1,4 @@
-@import url('./home.css');
-
+/*CSS for playbar*/
 .playbar{
 	position: fixed;
 	bottom:0;
@@ -10,29 +9,20 @@
 	color:rgba(255,255,255,255);
 	display: inline-grid;
 	grid-template-columns:auto repeat(3,50px) 700px repeat(2,50px) auto;
-	box-shadow: 0px 0px 10px 0px black
+	box-shadow: 0px 0px 10px 0px black;
 }
-.btn-wrapper{
-	height: 30px;
-	width: 50px;
-	position: initial;
-	perspective: 800px;
-	grid-column-start:3;
-}
+
 .toggle-play{
-	height: 30px;
 	width: 50px;
-	position: absolute;
-	transform-style: preserve-3d;
-  	transition: transform 1s;
+	height: 30px;
 }
-.toggle-play svg{
+.play, .pause{
 	position: absolute;
-	display: block;	
-	height:26px;
+	display: block;
 	width:30px;
-	backface-visibility: hidden;
-	background-color: rgba(2,2,2,255);
+}
+.hide {
+	display: none;
 }
 .playbar-btn{
 	width: 30px;
@@ -49,11 +39,8 @@
 .back{
 	grid-column:2;
 }
-.pause{
-	transform: rotateY(180deg);
-}
-.toggle-play.flipped{
-	transform: rotateY(180deg);
+.front{
+	grid-column: 4;
 }
 .slider{
 	height:30px;

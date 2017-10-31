@@ -1,0 +1,13 @@
+/*Fonts to be included in the project*/
+@font-face{
+	font-family: 'Barcode';
+	src:url(../fonts/barcode.ttf) format('truetype');
+}
+@font-face{
+	font-family: 'Megrim';
+	src:url(../fonts/megrim.ttf) format('truetype');
+}
+@font-face{
+	font-family: 'Raleway';
+	src:url(../fonts/Raleway-Regular.ttf) format('truetype');
+}
