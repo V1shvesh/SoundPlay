@@ -39,12 +39,12 @@
 .navbtn::-moz-focus-inner {
    border: 0;
 }
-.navbtn .child-1{
+.child-1{
 	border-top-left-radius: 0;
 	border-bottom-left-radius: 0;
 	margin-left: -2px;
 }
-.navbtn .child-2{
+.child-2{
 	border-top-right-radius: 0;
 	border-bottom-right-radius: 0;
 	margin-right: 0;
