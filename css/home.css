@@ -26,6 +26,7 @@ body{
     font-family: 'Barcode', cursive;
     font-size: 70px;
     text-decoration: none;
+    color: rgba(0,0,0,1);
 }
 /*Description*/
 .description{
@@ -33,6 +34,7 @@ body{
 	padding: 10px;
 	text-align: center;
 	background-color: rgba(200,200,200,1);
+    color: rgba(100,100,100,1);
 }
 
 

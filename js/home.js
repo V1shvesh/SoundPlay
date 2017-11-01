@@ -14,7 +14,9 @@ $(document).ready(function(){
 			loginForm.fadeIn();
 			loginStatus = true;
 		} else{
-			loginForm.fadeOut();
+			loginForm.fadeOut(300,function(){
+				$('#login-form form').trigger("reset");
+			});
 			loginStatus = false;
 		}
 	});
@@ -29,7 +31,9 @@ $(document).ready(function(){
 			signupForm.fadeIn();
 			signupStatus = true;
 		} else{
-			signupForm.fadeOut();
+			signupForm.fadeOut(function(){
+				$('#signup-form form').trigger("reset");
+			});
 			signupStatus = false;
 		}
 	});

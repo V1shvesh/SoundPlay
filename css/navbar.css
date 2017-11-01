@@ -39,12 +39,12 @@
 .navbtn::-moz-focus-inner {
    border: 0;
 }
-.navbtn:nth-child(1){
+.navbtn .child-1{
 	border-top-left-radius: 0;
 	border-bottom-left-radius: 0;
 	margin-left: -2px;
 }
-.navbtn:nth-child(2){
+.navbtn .child-2{
 	border-top-right-radius: 0;
 	border-bottom-right-radius: 0;
 	margin-right: 0;
@@ -103,20 +103,27 @@ input[type="text"],
 input[type="password"]{
 	width: 220px;
 	height: 30px;
-	border: 0px;
+	border: solid 1px black;
 	outline: none;
-	box-shadow: inset 0 0 10px rgba(238,238,238,1);
 	border-radius: 5px;
 	margin-bottom: 10px;
 	margin-top: 5px;
-	padding-left: 10px;
+	padding-left: 35px;
+	background-repeat: no-repeat;
+	background-position: 5px;
+	background-size: 25px;
 }
-
+.username{
+	background-image: url(../img/svg/avatar.svg);
+}
+.password{
+	background-image: url(../img/svg/key.svg);
+}
 .submit-button{
-	width: 90%;
+	width: 258px;
 	height: 30px;
 	background: rgba(238,238,238,1);
-	Letter-spacing: 2px;
+	letter-spacing: 2px;
 	font-size: 16px;
 	border-radius: 3px;
 	background-color: rgba(0,0,0,1);
@@ -128,6 +135,5 @@ input[type="password"]{
 
 .submit-button:hover{
 	cursor: pointer;
-	color: rgba(2,2,2,1);
-	background-color: rgba(200,200,200,1);
+	background-color: rgba(20,20,20,1);
 }
