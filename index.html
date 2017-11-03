@@ -3,7 +3,9 @@
 <head>
 	<title>SoundPlay - Online Playlist Curator</title>
 	<meta charset="utf-8"/>
+	<link rel="stylesheet" type="text/css" href="css/fonts.css"/>
 	<link rel="stylesheet" type="text/css" href="css/home.css"/>
+	<link rel="stylesheet" type="text/css" href="css/navbar.css"/>
 	<script type="text/javascript" src="js/jquery.js"></script>
 	<script type="text/javascript" src="js/home.js"></script>
 </head>
@@ -11,9 +13,9 @@
 	<div class="navbar">
 		<h1>SoundPlay</h1>
 		<div class="nav-buttons">
-			<button id="signup-btn-id" class="navbtn">Sign Up</button>
+			<button id="signup-btn-id" class="navbtn child-1">Sign Up</button>
 			<!-- TODO seperate js functions -->
-			<button id="login-btn-id" class="navbtn">Log In</button>
+			<button id="login-btn-id" class="navbtn child-2">Log In</button>
 		</div>
 		<div id="login-form" class="hover-form">
 			<div id="login-arrow" class="arrow-up">
@@ -21,10 +23,10 @@
 			</div>
 			<form>
 				<div>
-					<input type="text" placeholder="Username" required/>
+					<input type="text" class="username" placeholder="Username" required/>
 				</div>
 				<div>
-					<input type="password" placeholder="Password" required/>
+					<input type="password" class="password" placeholder="Password" required/>
 				</div>
 				<div>
 					<button type="submit" class="submit-button">Log In</button>
@@ -37,13 +39,13 @@
 			</div>
 			<form>
 				<div>
-					<input type="text" placeholder="Username" required/>
+					<input type="text" class="username" placeholder="Username" required/>
 				</div>
 				<div>
-					<input type="password" placeholder="Password" required/>
+					<input type="password" class="password" placeholder="Password" required/>
 				</div>
 				<div>
-					<input type="password" placeholder="Renter Password" required/>
+					<input type="password" class="password" placeholder="Re-Enter Password" required/>
 				</div>
 				<div>
 					<button type="submit" class="submit-button">Sign Up</button>

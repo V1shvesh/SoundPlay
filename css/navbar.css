@@ -1,0 +1,139 @@
+/*CSS for navbar*/
+.navbar{
+	position: fixed;
+	top:0;
+	width: 100%;
+	height: 60px;
+	background-color: rgba(2,2,2,1);
+	color:rgba(255,255,255,255);
+	box-shadow: 0px 0px 10px 2px black;
+}
+.navbar>h1{
+	float:left;
+	vertical-align: middle;
+	margin:0;
+	padding-left: 10px;
+	line-height: 60px;
+	font-size: 40px;
+	font-family: Megrim,cursive;
+}
+.navbtn{
+	margin: 5px 5px;
+	float: right;
+	height: 50px;
+	border:none;
+	color:rgba(255,255,255,1);
+	background-color: rgba(2,2,2,1);
+	width:150px;
+	padding: 0 20px;
+	transition-duration: 100ms;
+	outline: none;
+	font-size:100%;
+	border:2px solid white;
+	border-radius: 10px;
+}
+.navbtn:hover{
+	color:rgba(2,2,2,255);
+	background-color: rgba(255,255,255,1);
+}
+.navbtn::-moz-focus-inner {
+   border: 0;
+}
+.navbtn .child-1{
+	border-top-left-radius: 0;
+	border-bottom-left-radius: 0;
+	margin-left: -2px;
+}
+.navbtn .child-2{
+	border-top-right-radius: 0;
+	border-bottom-right-radius: 0;
+	margin-right: 0;
+}
+
+.arrow-up{
+	width: 0;
+	height: 0;
+	position: absolute;
+	border-left: 20px solid transparent;
+	border-right: 20px solid transparent;
+	border-bottom: 20px solid rgba(255,255,255,1);
+}
+
+#login-arrow{
+	right: 54px;
+	top: -20px;
+}
+
+#signup-arrow{
+	right: 53px;
+	top: -20px;
+}
+
+.hover-form{
+	position: absolute;
+	width: 300px;
+	height: auto;
+	background-color: rgba(255,255,255,1);
+	border-radius: 3px;
+	box-shadow: 0 0 20px rgba(150,150,150,0.8);
+}
+
+#login-form{
+	display: none;
+	right: 152px;
+	top: 76px;
+}
+
+#signup-form{
+	display: none;
+	right: 10px;
+	top: 76px;
+}
+
+.hover-form>form{
+	width: 250px;
+	margin: 25px auto;
+	text-align: center;
+	font-size: 25px;
+	font-family: sans-serif, Arial;
+	color: rgba(225,225,225,1);
+}
+
+input[type="text"],
+input[type="password"]{
+	width: 220px;
+	height: 30px;
+	border: solid 1px black;
+	outline: none;
+	border-radius: 5px;
+	margin-bottom: 10px;
+	margin-top: 5px;
+	padding-left: 35px;
+	background-repeat: no-repeat;
+	background-position: 5px;
+	background-size: 25px;
+}
+.username{
+	background-image: url(../img/svg/avatar.svg);
+}
+.password{
+	background-image: url(../img/svg/key.svg);
+}
+.submit-button{
+	width: 258px;
+	height: 30px;
+	background: rgba(238,238,238,1);
+	letter-spacing: 2px;
+	font-size: 16px;
+	border-radius: 3px;
+	background-color: rgba(0,0,0,1);
+	outline: none;
+	color: rgba(255,255,255,1);
+	border: 0px;
+	border: 3px;
+}
+
+.submit-button:hover{
+	cursor: pointer;
+	background-color: rgba(20,20,20,1);
+}

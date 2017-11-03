@@ -8,14 +8,16 @@ $("document").ready(function(){
 	var sound = new Howl({
 		src:['sound.mp3'],
 		preload: true,
-		onstop:function(){
+	});
+	sound.on("stop",function(){
 			$(slider).val(0);
-			$(".toggle-play").removeClass("flipped");
-		},
-		onend:function(){
+			$(".pause").removeClass("hide");
+			$(".play").addClass("hide");
+	});
+	sound.on("end",function(){
 			$(slider).val(0);
-			$(".toggle-play").removeClass("flipped");
-		}
+			$(".play").removeClass("hide");
+			$(".pause").addClass("hide");
 	});
 	var seek=0;
 	var prev;
@@ -50,12 +52,23 @@ $("document").ready(function(){
 		$(".toggle-play").click(function(e){
 			if(sound.playing()){
 				sound.pause();
-				$(".toggle-play").removeClass("flipped");
+				$(".play").removeClass("hide");
+				$(".pause").addClass("hide");
 			} else {
 				sound.play();
-				$(".toggle-play").addClass("flipped");
+				$(".pause").removeClass("hide");
+				$(".play").addClass("hide");
 			}
 		});
+	});
+	var jsmt = window.jsmediatags;
+	jsmediatags.read("/home/vishvesh/Git/SoundPlay/sound.mp3", {
+  		onSuccess: function(tag) {
+    	console.log(tag);
+	  },
+	  onError: function(error) {
+	    console.log(error);
+	  }
 	});
 });
 
