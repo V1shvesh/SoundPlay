@@ -14,7 +14,7 @@
 </head>
 <body>
 	<div class="navbar">
-		<a href="http://localhost/Soundplay/"><h1>SoundPlay</h1></a>
+		<a href="http://localhost/Soundplay/">SoundPlay</a>
 		<div class="nav-buttons">
 			<?php if(!$_SESSION['soundplay']['user_id']): ?>
 				<button id="signup-btn" class="navbtn child-last">Sign Up</button>
