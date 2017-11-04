@@ -8,14 +8,23 @@
 	color:rgba(255,255,255,255);
 	box-shadow: 0px 0px 10px 2px black;
 }
-.navbar>h1{
+.navbar>a{
 	float:left;
 	vertical-align: middle;
 	margin:0;
 	padding-left: 10px;
 	line-height: 60px;
 	font-size: 40px;
+	text-decoration: none;
+	outline: none;
 	font-family: Megrim,cursive;
+}
+.navbar>a:link,
+.navbar>a:visited,
+.navbar>a:hover,
+.navbar>a:active{
+	text-decoration: none;
+	color: rgba(255,255,255,1);
 }
 .navbtn{
 	margin: 5px 5px;
