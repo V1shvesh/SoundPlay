@@ -17,7 +17,7 @@
 </head>
 <body>
 	<div class="navbar">
-		<h1>SoundPlay</h1>
+		<a href="http://localhost/Soundplay/"><h1>SoundPlay</h1></a>
 		<div class="nav-buttons">
 			<button class="navbtn">Log Out</button>	
 		</div>
