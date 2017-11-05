@@ -24,12 +24,15 @@
 	</div>
 	<div class="playlist">
 		<div class="titlebar">
+			<span class="playlist-user">SampleUser's</span><br/>
 			<span class="playlist-title">SamplePlay</span>
-			<span class="playlist-user">SampleUser</span>
 		</div>
-		<div class="song">
-			<span class="song-title">Guillotine</span>
-		</div>asdf
+		<div class="song-list">
+			<div class=song>
+				<span class="song-artist">Guillotine</span><br>
+				<span class="song-details">Jon Bellion | The Human Condition</span>
+			</div>
+		</div>
 	</div>
 	<div class="playbar">
 		<svg class="playbar-btn back" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"

@@ -1,6 +1,33 @@
 /*CSS for Playlist Page*/
+body{
+	margin: 0;
+	font-family: Raleway;
+}
 .playlist{
-	width:50%;
+	width:70%;
 	margin:60px auto;
-	border: solid 1px rgb(50,50,50);
+	box-shadow: 2px 2px 2px 0 rgba(0,0,0,1);
+	border-left: solid 5px rgba(0,0,0,1);
+}
+.titlebar{
+	padding: 10px;
+	text-align: center;
+	background-color: rgba(0,0,0,1);
+	color: rgba(255,255,255,1);
+}
+.playlist-user{
+	font-size: 18px;
+}
+.playlist-title{
+	font-size: 50px;
+}
+.songs{
+	width: 100%;
+}
+.song{
+	height: 60px;
+	padding: 10px;
+}
+.song-artist{
+	font-size: 27px;
 }
