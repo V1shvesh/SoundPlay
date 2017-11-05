@@ -9,38 +9,31 @@
 	<title>Player</title>
 	<meta charset="utf-8"/>
 	<link rel="stylesheet" type="text/css" href="css/fonts.css"/>
-	<link rel="stylesheet" type="text/css" href="css/navbar.css">
-	<link rel="stylesheet" type="text/css" href="css/playlist.css">
-	<link rel="stylesheet" type="text/css" href="css/playbar.css">
+	<link rel="stylesheet" type="text/css" href="css/navbar.css"/>
+	<link rel="stylesheet" type="text/css" href="css/playlist.css"/>
+	<link rel="stylesheet" type="text/css" href="css/playbar.css"/>
 	<script type="text/javascript" src="./js/howler.js"></script>
 	<script type="text/javascript" src="./js/jquery.js"></script>
+	<script type="text/javascript" src="js/navbar.js"></script>
 	<script type="text/javascript" src="./js/player.js"></script>
 	<script type="text/javascript" src="./js/jsmediatags.js"></script>
 </head>
 <body>
 	<div class="navbar">
 		<a href="http://localhost/Soundplay/">SoundPlay</a>
-		<div class="nav-buttons">
-			<button class="navbtn">Log Out</button>	
-		</div>
+<?php if(!$_SESSION['soundplay']['user_id']): ?>
 	</div>
-	<div class="playlist">
-		<div class="titlebar">
-			<span class="playlist-user">SampleUser's</span><br/>
-			<span class="playlist-title">SamplePlay</span>
-		</div>
-		<div class="song-list">
-			<div class=song>
-				<span class="song-title">Guillotine</span><br>
-				<span class="song-details">Jon Bellion | The Human Condition</span>
-				<span class="song-duration">2:30</span>
-			</div>
-			<div class=song>
-				<span class="song-title">He Is The Same</span>
-				<span class="song-details">Jon Bellion | The Human Condition</span>
-				<span class="song-duration">2:30</span>
-			</div>
-		</div>
+	<div class="login-prompt">
+		<h2>So eager to get your groove on??</h2>
+		<p>You have to login first, friend...</p>
+		<button class="redirect">Back To Home</button>
+	</div>
+<?php else: ?>
+		<div class="nav-buttons">
+				<button id="logout-btn" class="navbtn child-last">Log Out</button>
+				<button id="upload-btn" class="navbtn child-mid">Upload</button>
+				<button id="playlist-btn" class="navbtn child-first">Playlist</button>
+		</div>				
 	</div>
 	<div class="playbar">
 		<svg class="playbar-btn prev" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
@@ -100,5 +93,6 @@
 		</g>
 	</svg>
 	</div>
+<?php endif; ?>	
 </body>
 </html>

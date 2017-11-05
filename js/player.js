@@ -7,6 +7,11 @@ $(window).on('load', function(){
 });
 
 $("document").ready(function(){
+
+	navbarInitialize();
+	$('.redirect').click(function(){
+		window.open("http://localhost/Soundplay","_self");
+	});
 	// Player States
 	var mouseflag = false;
 	var seek=0;
