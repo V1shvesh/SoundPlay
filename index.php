@@ -15,8 +15,8 @@
 <body>
 	<div class="navbar">
 		<a href="http://localhost/Soundplay/">SoundPlay</a>
+		<?php if(!$_SESSION['soundplay']['user_id']): ?>
 		<div class="nav-buttons">
-			<?php if(!$_SESSION['soundplay']['user_id']): ?>
 				<button id="signup-btn" class="navbtn child-last">Sign Up</button>
 				<!-- TODO seperate js functions -->
 				<button id="login-btn" class="navbtn child-first">Log In</button>
@@ -42,12 +42,14 @@
 					<input type="password" name="password_reenter" class="password" placeholder="Re-Enter Password" maxlength="20" required/>
 					<button type="submit" class="submit-button">Sign Up</button>
 				</form>
-			<?php else: ?>
+		</div>
+		<?php else: ?>
+		<div class="nav-buttons">
 				<button id="logout-btn" class="navbtn child-last">Log Out</button>
 				<button id="upload-btn" class="navbtn child-mid">Upload</button>
 				<button id="playlist-btn" class="navbtn child-first">Playlist</button>
+		</div>				
 			<?php endif; ?>	
-		</div>
 	</div>
 	<div class="bg1 parallax">
 	</div>
