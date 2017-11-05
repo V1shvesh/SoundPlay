@@ -1,5 +1,7 @@
 <?php
-	session_start(['cookie_lifetime' => 86400]);
+	session_start([
+		'cookie_lifetime' => 86400,
+	]);
 ?>
 <!DOCTYPE html>
 <html>
@@ -7,32 +9,34 @@
 	<title>Player</title>
 	<meta charset="utf-8"/>
 	<link rel="stylesheet" type="text/css" href="css/fonts.css"/>
-	<link rel="stylesheet" type="text/css" href="css/navbar.css">
-	<link rel="stylesheet" type="text/css" href="css/playlist.css">
-	<link rel="stylesheet" type="text/css" href="css/playbar.css">
+	<link rel="stylesheet" type="text/css" href="css/navbar.css"/>
+	<link rel="stylesheet" type="text/css" href="css/playlist.css"/>
+	<link rel="stylesheet" type="text/css" href="css/playbar.css"/>
 	<script type="text/javascript" src="./js/howler.js"></script>
 	<script type="text/javascript" src="./js/jquery.js"></script>
+	<script type="text/javascript" src="js/navbar.js"></script>
 	<script type="text/javascript" src="./js/player.js"></script>
 	<script type="text/javascript" src="./js/jsmediatags.js"></script>
 </head>
 <body>
 	<div class="navbar">
 		<a href="http://localhost/Soundplay/">SoundPlay</a>
-		<div class="nav-buttons">
-			<button class="navbtn">Log Out</button>	
-		</div>
+<?php if(!$_SESSION['soundplay']['user_id']): ?>
 	</div>
-	<div class="playlist">
-		<div class="titlebar">
-			<span class="playlist-title">SamplePlay</span>
-			<span class="playlist-user">SampleUser</span>
-		</div>
-		<div class="song">
-			<span class="song-title">Guillotine</span>
-		</div>asdf
+	<div class="login-prompt">
+		<h2>So eager to get your groove on??</h2>
+		<p>You have to login first, friend...</p>
+		<button class="redirect">Back To Home</button>
+	</div>
+<?php else: ?>
+		<div class="nav-buttons">
+				<button id="logout-btn" class="navbtn child-last">Log Out</button>
+				<button id="upload-btn" class="navbtn child-mid">Upload</button>
+				<button id="playlist-btn" class="navbtn child-first">Playlist</button>
+		</div>				
 	</div>
 	<div class="playbar">
-		<svg class="playbar-btn back" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+		<svg class="playbar-btn prev" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 477.175 477.175" xml:space="preserve">
 			<path d="M145.188,238.575l215.5-215.5c5.3-5.3,5.3-13.8,0-19.1s-13.8-5.3-19.1,0l-225.1,225.1c-5.3,5.3-5.3,13.8,0,19.1l225.1,225
 		c2.6,2.6,6.1,4,9.5,4s6.9-1.3,9.5-4c5.3-5.3,5.3-13.8,0-19.1L145.188,238.575z"/>
@@ -52,7 +56,7 @@
 				</g>
 			</svg>
 		</div>
-		<svg class="playbar-btn front" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+		<svg class="playbar-btn next" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 477.175 477.175" xml:space="preserve">
 			<g>
 				<path d="M360.731,229.075l-225.1-225.1c-5.3-5.3-13.8-5.3-19.1,0s-5.3,13.8,0,19.1l215.5,215.5l-215.5,215.5
@@ -89,5 +93,6 @@
 		</g>
 	</svg>
 	</div>
+<?php endif; ?>	
 </body>
 </html>
