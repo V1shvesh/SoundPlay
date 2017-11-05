@@ -36,10 +36,10 @@
 	stroke-width:3px;
 	fill: rgba(256,256,256,256);
 }
-.back{
+.prev{
 	grid-column:2;
 }
-.front{
+.next{
 	grid-column: 4;
 }
 .slider{
