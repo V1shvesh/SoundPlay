@@ -1,10 +1,10 @@
 <?php 
 	session_start();
-	$conn = mysqli_connect("localhost", "root", "", "soundplay");
+	$conn = mysqli_connect("localhost", "root", "l33t@Wifi", "soundplay");
 	//Check Connection
 	if(!$conn){
 		$result['connStatus'] = false;
-		$result['error']= $conn->connect_error;
+		$result['error'] = $conn->connect_error;
 		echo json_encode($result);
 		die();
 	} else {
@@ -25,7 +25,7 @@
 
 	$sql_data = $conn->query($query);
 	if($sql_data->num_rows == 0){
-		$result['loginStatus']= false;
+		$result['loginStatus'] = false;
 		$result['error'] = "Incorrect Username/Password";
 		echo json_encode($result);
 		die();
@@ -34,7 +34,7 @@
 	$row = $sql_data->fetch_assoc();
 	$password_fetched = $row['password'];
 
-	if($password_fetched == $password){
+	if(!password_verify($password_fetched, $password)) {
 		$result['user_id'] = $row['user_id'];
 		$result['username'] = $row['user_name'];
 		$result['loginStatus'] = true;
@@ -46,4 +46,6 @@
 		die();
 	}
 	echo json_encode($result);
+
+	$conn->close();
 ?>
