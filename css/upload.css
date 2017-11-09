@@ -4,7 +4,41 @@ body{
 	color: rgba(0,0,0,1);
 	padding-top: 100px;
 }
-.upload{
+.upload-form{
 	position: center;
 	text-align: center;
+	font-family: Raleway;
+}
+.upload-form>input[type="number"] {
+  -webkit-appearance: textfield;
+     -moz-appearance: textfield;
+          appearance: textfield;
+}
+.upload-form>input[type=number]::-webkit-inner-spin-button, 
+.upload-form>input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none;
+}
+.upload-tag{
+	width: 100px;
+	height: 40px;
+	display: inline-block;
+	margin: 2px 0;
+	line-height: 40px;
+	background-color: rgba(0,0,0,1);
+	font-size: 20px;
+	color: rgba(255,255,255,1);
+	vertical-align: middle;
+}
+.upload-form>input[type="text"],.upload-form>input[type="number"]{
+	width: 300px;
+	height: 40px;
+	margin: 2px 0 2px -4px;
+	box-sizing: border-box;
+	border: solid 2px;
+	padding: 0;
+	vertical-align: middle;
+}
+
+.upload-form>input[type="file"]{
+
 }

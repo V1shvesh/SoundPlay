@@ -114,8 +114,8 @@ $("document").ready(function(){
 		}
 		id= (id + 1)%size;
 		$(slider).val(0);
+		last_val = 0;
 		if(play_state)
 			playlist[id].play();
 	});
 });
-

@@ -60,6 +60,15 @@ $(document).ready(function(){
 		});
 	});
 
+	// Work In Progress
+	$('#playlist-btn').click(function(){
+		window.open(window.location.href + "player.php&playlist-id=", "_self"); 
+	});
+
+	$('#upload-btn').click(function(){
+		window.open(window.location.href + "upload.php", "_self");
+	});
+
 	// Submit Handlers
 	loginForm.submit(function(event){
 		event.preventDefault();

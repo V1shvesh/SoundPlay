@@ -1,6 +1,6 @@
 <?php 
 
-	$conn = mysqli_connect("localhost", "root", "l33t@Wifi", "soundplay");
+	$conn = mysqli_connect("localhost", "root", "", "soundplay");
 
 	
 	// Check Connection
