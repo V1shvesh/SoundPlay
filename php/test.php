@@ -6,7 +6,8 @@
 <body>
 <?php 
 	session_start();
-	echo var_dump($_SESSION);
+	$result['kuchbhi'] = "kuchbhinhi";
+	echo json_encode($result);
 	session_destroy();
 ?>
 </body>

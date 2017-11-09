@@ -14,12 +14,12 @@
 </head>
 <body>
 	<div class="navbar">
-		<a href="http://localhost/Soundplay/">SoundPlay</a>
-		<div class="nav-buttons">
-			<?php if(!$_SESSION['soundplay']['user_id']): ?>
-				<button id="signup-btn" class="navbtn child-last">Sign Up</button>
-				<!-- TODO seperate js functions -->
-				<button id="login-btn" class="navbtn child-first">Log In</button>
+		<a href="http://localhost/SoundPlay/">SoundPlay</a>
+		<?php if(!$_SESSION['soundplay']['user_id']): ?>
+			<div class="nav-buttons">
+					<button id="signup-btn" class="navbtn child-last">Sign Up</button>
+					<!-- TODO seperate js functions -->
+					<button id="login-btn" class="navbtn child-first">Log In</button>
 			</div>
 			<div id="login-form" class="hover-form">
 				<div id="login-arrow" class="arrow-up">
@@ -34,7 +34,7 @@
 			</div>
 			<div id="signup-form" class="hover-form">
 				<div id="signup-arrow" class="arrow-up">
-				
+			
 				</div>
 				<form>
 					<input type="text" name="username" class="username" placeholder="Username" required/>
@@ -42,12 +42,14 @@
 					<input type="password" name="password_reenter" class="password" placeholder="Re-Enter Password" maxlength="20" required/>
 					<button type="submit" class="submit-button">Sign Up</button>
 				</form>
-			<?php else: ?>
+			</div>
+		<?php else: ?>
+			<div class="nav-buttons">
 				<button id="logout-btn" class="navbtn child-last">Log Out</button>
 				<button id="upload-btn" class="navbtn child-mid">Upload</button>
 				<button id="playlist-btn" class="navbtn child-first">Playlist</button>
-			<?php endif; ?>	
-		</div>
+			</div>				
+		<?php endif; ?>	
 	</div>
 	<div class="bg1 parallax">
 	</div>
