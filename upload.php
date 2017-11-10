@@ -7,6 +7,7 @@
 	<link rel="stylesheet" type="text/css" href="css/upload.css"/>
 	<link rel="stylesheet" type="text/css" href="css/navbar.css"/>
 	<script type="text/javascript" src="./js/jquery.js"></script>
+	<script type="text/javascript" src="./js/jsmediatags.js"></script>
 	<script type="text/javascript" src="./js/upload.js"></script>
 </head>
 
