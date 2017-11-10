@@ -42,3 +42,33 @@ body{
 .upload-form>input[type="file"]{
 
 }
+
+.upload-file-wrapper {
+	margin: 2px auto;
+} 
+.upload-file-trigger{
+  height: 40px;
+  width: 400px;
+  display: inline-block;
+  padding: 0;
+  background: rgba(0,0,0,1);
+  color: rgba(255,255,255,1);
+  font-size: 20px;
+  line-height: 40px;
+  transition: all .4s;
+  cursor: pointer;
+}
+.upload-file {
+  position: absolute;
+  top: 0; left: 0;
+  opacity: 0;
+  padding: 14px 0;
+  cursor: pointer;
+}
+.upload-file:hover + .upload-file-trigger,
+.upload-file:focus + .upload-file-trigger,
+.upload-file-trigger:hover,
+.upload-file-trigger:focus {
+  background: #34495E;
+  color: #39D2B4;
+}

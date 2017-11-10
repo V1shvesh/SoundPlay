@@ -59,8 +59,12 @@
   		<label class="upload-tag">Year</label>
   		<input type="number" name="Year" min="1900" max="2100"><br>
   		<label class="upload-tag">File</label>
-  		<input type="text" name="filepath">
-  		<input type="file" name="File"><br>
+  		<input type="text" name="filepath" class="filepath">
+  		<div class="upload-file-wrapper">
+  			<input id="upload-file" class="upload-file" type="file" name="File"/>
+  			<label tabindex="0" for="upload-file" class="upload-file-trigger">Select a file...</label>
+  		</div>
+  	  	<br>
   		<input type="submit" name="upload" value="Upload">
   	</form>
 
