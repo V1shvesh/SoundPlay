@@ -5,6 +5,8 @@ body{
 	padding-top: 100px;
 }
 .upload-form{
+	margin: auto;
+	width: 75%;
 	position: center;
 	text-align: center;
 	font-family: Raleway;
