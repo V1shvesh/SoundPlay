@@ -144,14 +144,8 @@ input[type="password"]{
 .password {
 	background-image: url(../img/svg/key.svg);
 }
-<<<<<<< HEAD
 .error{
 	width: 100%;
-=======
-
-.error {
-	width: 260px;
->>>>>>> eba7f774217f59625dabada6ab0b9dae21c52e22
 	height: 0px;
 	margin: 5px 0;
 	display: block;
