@@ -11,29 +11,33 @@ $('document').ready(function(){
 	var year = $('.upload-form>input[name="year"]');
 
 	fileUpload.click(function( event ){
+		title.val("");
+		artist.val("");
+		album.val("");
+		year.val("");
 		fileInput.blur();
 	});
 	fileInput.change(function( event ) {  
 		filePath.val(event.target.files[0].name);
+		$('.error').css("height","0");
 		jsmediatags.read(event.target.files[0],{
 			onSuccess: function(data){
 				var tags = data.tags;
-				if(tags.title){
+				if(tags.title) {
 					title.val(tags.title);
 				}
-				if(tags.album){
+				if(tags.album) {
 					album.val(tags.album);
 				}
-				if(tags.artist){
+				if(tags.artist) {
 					artist.val(tags.artist);
 				}
-				if(tags.year){
+				if(tags.year) {
 					year.val(tags.year);
 				}
-
 			},
 			onError: function (error) {
-				console.log(error);
+				$('.error').css("height","30px");
 			}
 		});
 		fileInput.blur();
