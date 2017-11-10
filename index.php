@@ -18,7 +18,6 @@
 		<?php if(!$_SESSION['soundplay']['user_id']): ?>
 			<div class="nav-buttons">
 					<button id="signup-btn" class="navbtn child-last">Sign Up</button>
-					<!-- TODO seperate js functions -->
 					<button id="login-btn" class="navbtn child-first">Log In</button>
 			</div>
 			<div id="login-form" class="hover-form">

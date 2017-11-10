@@ -62,7 +62,7 @@ $(document).ready(function(){
 
 	// Work In Progress
 	$('#playlist-btn').click(function(){
-		window.open(window.location.href + "player.php&playlist-id=", "_self"); 
+		// window.open(window.location.href + "player.php&playlist-id=", "_self"); 
 	});
 
 	$('#upload-btn').click(function(){
@@ -84,9 +84,11 @@ $(document).ready(function(){
 			} else {
 				loginError.css("height","0");
 				loginError.text("");
+				console.log("No data");
 				window.open(window.location.href, "_self");
 			}
 		});
+		console.log("What??");
 	});
 	signupForm.submit(function(event){
 		event.preventDefault();

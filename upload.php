@@ -51,17 +51,17 @@
 	</div>
 	<form class="upload-form">
 		<label class="upload-tag">Title</label>
-  		<input type="text" name="Title"><br>
+  		<input type="text" name="title"><br>
   		<label class="upload-tag">Artist</label>
-  		<input type="text" name="Artist"><br>
+  		<input type="text" name="artist"><br>
   		<label class="upload-tag">Album</label>
-  		<input type="text" name="Album"><br>
+  		<input type="text" name="album"><br>
   		<label class="upload-tag">Year</label>
-  		<input type="number" name="Year" min="1900" max="2100"><br>
+  		<input type="number" name="year" min="1900" max="2100"><br>
   		<label class="upload-tag">File</label>
   		<input type="text" name="filepath" class="filepath">
   		<div class="upload-file-wrapper">
-  			<input id="upload-file" class="upload-file" type="file" name="File"/>
+  			<input id="upload-file" class="upload-file" type="file" name="file"/>
   			<label tabindex="0" for="upload-file" class="upload-file-trigger">Select a file...</label>
   		</div>
   	  	<br>
