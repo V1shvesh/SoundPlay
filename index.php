@@ -18,9 +18,10 @@
 		<?php if(!$_SESSION['soundplay']['user_id']): ?>
 			<div class="nav-buttons">
 					<button id="signup-btn" class="navbtn child-last">Sign Up</button>
+					<!-- TODO seperate js functions -->
 					<button id="login-btn" class="navbtn child-first">Log In</button>
 			</div>
-			<div id="login-form" class="hover-form">
+			<div id="login-form" class="hover-div">
 				<div id="login-arrow" class="arrow-up">
 				
 				</div>
@@ -31,7 +32,7 @@
 					<button type="submit" class="submit-button">Log In</button>
 				</form>	
 			</div>
-			<div id="signup-form" class="hover-form">
+			<div id="signup-form" class="hover-div">
 				<div id="signup-arrow" class="arrow-up">
 			
 				</div>
@@ -47,6 +48,19 @@
 				<button id="logout-btn" class="navbtn child-last">Log Out</button>
 				<button id="upload-btn" class="navbtn child-mid">Upload</button>
 				<button id="playlist-btn" class="navbtn child-first">Playlist</button>
+
+				<div id="playlist-form" class="hover-div">
+					<div id="playlist-arrow" class="arrow-up">
+				
+					</div>
+					<div>
+  						<div id="myDropdown">
+    						<a href="#">Link 1</a>
+    						<a href="#">Link 2</a>
+    						<a href="#">Link 3</a>
+  						</div>
+					</div> 
+				</div>
 			</div>				
 		<?php endif; ?>	
 	</div>
