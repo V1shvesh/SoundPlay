@@ -26,22 +26,33 @@
 	<form class="upload-form">
 		<span id="login-error" class="error">Can't upload file</span>
 		<label class="upload-tag">Title</label>
-  		<input type="text" name="title"><br>
-  		<label class="upload-tag">Artist</label>
-  		<input type="text" name="artist"><br>
-  		<label class="upload-tag">Album</label>
-  		<input type="text" name="album"><br>
-  		<label class="upload-tag">Year</label>
-  		<input type="number" name="year" min="1900" max="2100"><br>
-  		<label class="upload-tag">File</label>
-  		<input type="text" name="filepath" class="filepath">
-  		<div class="upload-file-wrapper">
-  			<input id="upload-file" class="upload-file" type="file" name="file"/>
-  			<label tabindex="0" for="upload-file" class="upload-file-trigger">Select a file...</label>
-  		</div>
-  	  	<br>
-  		<input type="submit" name="upload" value="Upload">
-  	</form>
+		<input type="text" name="title"><br>
+		<label class="upload-tag">Artist</label>
+		<input type="text" name="artist"><br>
+		<label class="upload-tag">Album</label>
+		<input type="text" name="album"><br>
+		<label class="upload-tag">Year</label>
+		<input type="number" name="year" min="1900" max="2100"><br>
+		<div class="upload-list">
+			<label class="upload-tag">Playlist</label>
+			<div class="upload-select">
+				<select name="playlist">
+				</select>
+			</div><br>
+		</div>
+		<div class="new-playlist">
+			<label class="upload-tag">New</label>
+			<input type="text" name="new-playlist"><br>
+		</div>
+		<label class="upload-tag">File</label>
+		<input type="text" name="filepath" class="filepath" disabled>
+		<div class="upload-file-wrapper">
+			<input id="upload-file" class="upload-file" type="file" name="file"/>
+			<label tabindex="0" for="upload-file" class="upload-file-trigger">Select a file...</label>
+		</div>
+		<br>
+		<input type="submit" name="upload" value="Upload">
+	</form>
 
 </body>
 

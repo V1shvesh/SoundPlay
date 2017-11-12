@@ -49,21 +49,20 @@
 				<button id="upload-btn" class="navbtn child-mid">Upload</button>
 				<button id="playlist-btn" class="navbtn child-first">Playlist</button>
 
-				<div id="playlist-form" class="hover-div">
+				<div id="playlist-menu" class="hover-div">
 					<div id="playlist-arrow" class="arrow-up">
 				
 					</div>
-					<div>
-  						<div id="myDropdown">
-    						<a href="#">Link 1</a>
-    						<a href="#">Link 2</a>
-    						<a href="#">Link 3</a>
-  						</div>
+					<div class="playlist-list">
+   						<span class="playlist-entry">Lolols</span>
+   						<span class="playlist-entry">Lolols</span>
+   						<span class="playlist-entry">Lolols</span>
+   						<span class="playlist-entry">Lolols</span>
 					</div> 
 				</div>
 			</div>				
 		<?php endif; ?>	
-	</div>
+	</div>.
 	<div class="bg1 parallax">
 	</div>
 	<div class="description">

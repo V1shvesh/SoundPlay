@@ -1,5 +1,5 @@
 <?php 
-
+	session_start();
 	$conn = mysqli_connect("localhost", "root", "", "soundplay");
 
 	
@@ -49,13 +49,14 @@
 		die();
 	}
 	
-	$query = "SELECT user_id FROM user WHERE username = '".$username."'";
+	$query = "SELECT user_id FROM user WHERE user_name = '".$username."'";
 	$sql_data = $conn->query($query);
 	$row = $sql_data->fetch_assoc();
 
 	$result['signupStatus'] = true;
 	$result['user_id'] = $row['user_id'];
 	$result['username'] = $username;
+	$_SESSION['soundplay']['user_id'] = $row['user_id'];
 
 	echo json_encode($result);
 

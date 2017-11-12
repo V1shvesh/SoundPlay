@@ -1,20 +1,36 @@
 $('document').ready(function(){
 	var jsmediatags = window.jsmediatags;
+	var uploadForm = $('.upload-form');
 	var fileInput = $('.upload-file');
 	var fileUpload = $('.upload-file-trigger');
 	var filePath = $('.filepath');
-	$('.upload-form').trigger('reset');
+	var playlistSelect = $('.upload-select select')
+	var newPlaylistName = $('.new-playlist');
+
+	uploadForm.trigger('reset');
 
 	var title = $('.upload-form>input[name="title"]');
 	var artist = $('.upload-form>input[name="artist"]');
 	var album = $('.upload-form>input[name="album"]');
 	var year = $('.upload-form>input[name="year"]');
 
+	var playlist_request = $.post('./php/playlist_retrieve.php',function(response){
+		response = JSON.parse(response);
+		var playlist = response.playlist;
+		playlist.forEach(function(element){
+			playlistSelect.append('<option value="'+element.playlist_id+'">'+element.playlist_name+'</option>')
+		});
+		playlistSelect.append('<option value="new">New Playlist...</option>');
+	});
+
 	fileUpload.click(function( event ){
 		title.val("");
 		artist.val("");
 		album.val("");
 		year.val("");
+		fileInput.blur();
+	});
+	fileUpload.mouseleave(function( event ){
 		fileInput.blur();
 	});
 	fileInput.change(function( event ) {  
@@ -41,5 +57,15 @@ $('document').ready(function(){
 			}
 		});
 		fileInput.blur();
-	});  
+	});
+	playlistSelect.change(function(){
+		if(playlistSelect.val() === 'new'){
+			newPlaylistName.fadeIn(300);
+		} else {
+			newPlaylistName.fadeOut(300);
+		}
+	});
+	uploadForm.submit(function(){
+
+	});
 });

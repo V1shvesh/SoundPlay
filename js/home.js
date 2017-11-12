@@ -6,13 +6,14 @@ $(document).ready(function(){
 	var loginForm = $('#login-form form');
 	var signupForm = $('#signup-form form');
 	var loginError = $('#login-error');
-	// loginError.hide();
+	var playlistMenu = $('#playlist-menu');
+	var playlistList = $('.playlist-list')
 
 	// Status and Request Variables
 	var loginStatus = false;
 	var signupStatus = false;
+	var playlistStatus = false;
 	var request = false;
-
 	// Click Handlers
 	$("#login-btn").click(function(event){
 		event.preventDefault();
@@ -60,11 +61,6 @@ $(document).ready(function(){
 		});
 	});
 
-	// Work In Progress
-	$('#playlist-btn').click(function(){
-		// window.open(window.location.href + "player.php&playlist-id=", "_self"); 
-	});
-
 	$('#upload-btn').click(function(){
 		window.open(window.location.href + "upload.php", "_self");
 	});
@@ -88,7 +84,6 @@ $(document).ready(function(){
 				window.open(window.location.href, "_self");
 			}
 		});
-		console.log("What??");
 	});
 	signupForm.submit(function(event){
 		event.preventDefault();
@@ -98,6 +93,37 @@ $(document).ready(function(){
 		request = $.post('./php/signup.php', values, function(response){
 			response = JSON.parse(response);
 			console.log(response);
+			if(response.error&&!response.signupStatus){
+				console.log(response.error);
+			} else {
+				console.log("Made it");
+				window.open(window.location.href, "_self");
+			}
 		});
 	});
+	if($('#playlist-btn').length>0){
+		var values = "";
+		var playlist = false;
+		if(request)
+			request.abort();
+		request = $.post('./php/playlist_retrieve.php', values, function(response){
+			response = JSON.parse(response);
+			console.log(response);
+			playlist = response.playlist;
+			playlist.forEach(function(element){
+				playlistList.append('<span class="playlist-entry" id="'+element.playlist_id+'">'+element.playlist_name+'</span>');
+			});
+		});
+		$('#playlist-btn').click(function(event){
+			event.preventDefault();
+			if(!playlistStatus){
+				playlistStatus = true;
+				playlistMenu.fadeIn();
+			} else {
+				playlistStatus = false;
+				playlistMenu.fadeOut();
+			}
+			console.log("Click");
+		});
+	}
 });
