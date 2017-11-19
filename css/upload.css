@@ -11,15 +11,6 @@ body{
 	text-align: center;
 	font-family: Raleway;
 }
-.upload-form>input[type="number"] {
-  -webkit-appearance: textfield;
-     -moz-appearance: textfield;
-          appearance: textfield;
-}
-.upload-form>input[type=number]::-webkit-inner-spin-button, 
-.upload-form>input[type=number]::-webkit-outer-spin-button { 
-  -webkit-appearance: none;
-}
 .upload-tag{
 	width: 100px;
 	height: 40px;
@@ -31,7 +22,7 @@ body{
 	color: rgba(255,255,255,1);
 	vertical-align: middle;
 }
-.upload-form input[type="text"],.upload-form>input[type="number"]{
+.upload-form input[type="text"]{
 	width: 300px;
 	height: 40px;
 	margin: 2px 0 2px -4px;
@@ -42,6 +33,7 @@ body{
 }
 .upload-form>input[type="text"]:disabled{
 	background-color: white;
+	color: black;
 }
 .upload-list{
 	width: 400px;
@@ -165,5 +157,35 @@ body{
 	border-color: black;
 }
 .new-playlist{
-	display: none;	
+	display: none;
+}
+.file-error{
+	width: 80%;
+	height: 30px;
+	margin: 10px 0;
+	display: block;
+	font-size: 17px;
+	text-align: center;
+	line-height: 30px;
+	overflow: hidden;
+	background-color: rgba(255,0,51,0.9);
+	color: white;
+	border-radius: 3px;
+	transition: height 0.5s;
+}
+
+
+.file-success{
+	width: 80%;
+	height: 30px;
+	margin: 10px 0;
+	display: block;
+	font-size: 17px;
+	text-align: center;
+	line-height: 30px;
+	overflow: hidden;
+	background-color: limegreen; 
+	color: white;
+	border-radius: 3px;
+	transition: height 0.5s;
 }

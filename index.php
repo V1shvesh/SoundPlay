@@ -15,7 +15,7 @@
 <body>
 	<div class="navbar">
 		<a href="http://localhost/SoundPlay/">SoundPlay</a>
-		<?php if(!$_SESSION['soundplay']['user_id']): ?>
+		<?php if(!$_SESSION['soundplay']): ?>
 			<div class="nav-buttons">
 					<button id="signup-btn" class="navbtn child-last">Sign Up</button>
 					<!-- TODO seperate js functions -->
@@ -54,10 +54,7 @@
 				
 					</div>
 					<div class="playlist-list">
-   						<span class="playlist-entry">Lolols</span>
-   						<span class="playlist-entry">Lolols</span>
-   						<span class="playlist-entry">Lolols</span>
-   						<span class="playlist-entry">Lolols</span>
+						
 					</div> 
 				</div>
 			</div>				

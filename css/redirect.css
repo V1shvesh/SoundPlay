@@ -1,0 +1,51 @@
+.redirect{
+	width: 75vw;
+	height: 26vw;
+	display: flex;
+	background-image: url("../img/login-prompt.jpg");
+	background-size: 84vw 55.84vw;
+	margin: 100px auto;
+	text-align: center;
+	flex-direction: column;
+	flex-wrap: wrap;
+	align-items: center;
+}
+.redirect-head{
+	width: 300px;
+	height: 40px;
+	font-size: 30px;
+	line-height: 40px;
+	color: black;
+	background-color: white;
+	margin: 30% auto 10px;
+}
+.redirect-text{
+	width: 200px;
+	height: 25px;
+	line-height: 25px;
+	margin: 10px auto;
+	background-color: white;
+	color: black;
+	font-size: 18px;
+}
+.redirect-btn{
+	margin: 5px 5px;
+	height: 50px;
+	border:none;
+	color:rgba(255,255,255,1);
+	background-color: rgba(2,2,2,1);
+	width:150px;
+	padding: 0 20px;
+	transition-duration: 100ms;
+	outline: none;
+	font-size:100%;
+	border:2px solid white;
+	border-radius: 10px;
+}
+.redirect-btn:hover {
+	color:rgba(2,2,2,255);
+	background-color: rgba(255,255,255,1);
+}
+.redirect-btn::-moz-focus-inner {
+   border: 0;
+}

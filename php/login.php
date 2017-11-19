@@ -39,6 +39,7 @@
 		$result['username'] = $row['user_name'];
 		$result['loginStatus'] = true;
 		$_SESSION['soundplay']['user_id'] = $result['user_id'];
+		$_SESSION['soundplay']['username'] = $result['username'];
 	} else {
 		$result['loginStatus']= false;
 		$result['error'] = "Incorrect Username/Password";

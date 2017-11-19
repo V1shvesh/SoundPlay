@@ -1,6 +1,13 @@
 // Slider Selector
 var slider = ".slider>input[type='range']";
 
+function createHowl(file){
+	return new Howl({
+		src:[file],
+		preload: true,
+	});
+}
+
 // Reset Slider on Reload
 $(window).on('load', function(){
     $(slider).val(0);
@@ -18,20 +25,19 @@ $("document").ready(function(){
 
 	// ID Index
 	var id=0;
-
-	function createHowl(file){
-		return new Howl({
-			src:[file],
-			preload: true,
-		});
-	}
-
-	// Playlist Creation
 	var playlist = [];
-	playlist.push(createHowl('sound.mp3'));
-	playlist.push(createHowl('sound1.mp3'));
+
+	get_params = window.location.search.substr(1);
+	
+	// Playlist Creation
+	$.post('./php/tracks_retrieve.php',get_params,function(response){
+		response = JSON.parse(response);
+		console.log(response);
+		$('.playlist-user').text(response.username + "'s");
+		$('.playlist-title').text(response.playlist_name);
+
+	});
 	var size = playlist.length;
-	console.log(playlist[id].state());
 
 	$('.song-list .song').click(function(e){
 		this.addClass("selected");
@@ -112,10 +118,13 @@ $("document").ready(function(){
 		if(play_state){
 			playlist[id].stop();
 		}
-		id= (id + 1)%size;
+		id=(id+1)%size;
 		$(slider).val(0);
 		last_val = 0;
 		if(play_state)
 			playlist[id].play();
+	});
+	$('.redirect-btn').click(function(){
+		window.open('http://localhost/Soundplay/','_self')
 	});
 });

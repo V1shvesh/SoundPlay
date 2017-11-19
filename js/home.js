@@ -101,6 +101,7 @@ $(document).ready(function(){
 			}
 		});
 	});
+	// Whether playlist button exists or not
 	if($('#playlist-btn').length>0){
 		var values = "";
 		var playlist = false;
@@ -108,11 +109,14 @@ $(document).ready(function(){
 			request.abort();
 		request = $.post('./php/playlist_retrieve.php', values, function(response){
 			response = JSON.parse(response);
-			console.log(response);
 			playlist = response.playlist;
 			playlist.forEach(function(element){
 				playlistList.append('<span class="playlist-entry" id="'+element.playlist_id+'">'+element.playlist_name+'</span>');
 			});
+		});
+		playlistList.click(function(event){
+			console.log(event);
+			window.location = 'player.php?playlist_id=' + event.target.id + '&playlist_name=' + event.target.innerText;
 		});
 		$('#playlist-btn').click(function(event){
 			event.preventDefault();
@@ -123,7 +127,6 @@ $(document).ready(function(){
 				playlistStatus = false;
 				playlistMenu.fadeOut();
 			}
-			console.log("Click");
 		});
 	}
 });

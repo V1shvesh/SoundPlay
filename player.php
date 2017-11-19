@@ -12,16 +12,18 @@
 	<link rel="stylesheet" type="text/css" href="css/navbar.css">
 	<link rel="stylesheet" type="text/css" href="css/playlist.css">
 	<link rel="stylesheet" type="text/css" href="css/playbar.css">
+	<link rel="stylesheet" type="text/css" href="css/redirect.css">
 	<script type="text/javascript" src="./js/howler.js"></script>
 	<script type="text/javascript" src="./js/jquery.js"></script>
 	<script type="text/javascript" src="./js/player.js"></script>
-	<script type="text/javascript" src="./js/jsmediatags.js"></script>
 </head>
 <body>
+<?php if($_SESSION['soundplay']['user_id']): ?>
 	<div class="navbar">
 		<a href="http://localhost/Soundplay/">SoundPlay</a>
 		<div class="nav-buttons">
-			<button class="navbtn">Log Out</button>	
+			<button class="navbtn child-last">Log Out</button>
+			<button id="playlist-btn" class="navbtn child-first">Home</button>
 		</div>
 	</div>
 	<div class="playlist">
@@ -100,5 +102,15 @@
 		</g>
 	</svg>
 	</div>
+<?php else: ?>
+	<div class="navbar">
+		<a href="http://localhost/Soundplay/">SoundPlay</a>
+	</div>
+	<div class="redirect">
+		<h3 class="redirect-head">Not So Soon!!!</h3>
+		<p class="redirect-text">Login First!</p>
+		<button class="redirect-btn">Back Home</button>
+	</div>
+<?php endif; ?>
 </body>
 </html>
