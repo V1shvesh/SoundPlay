@@ -18,7 +18,7 @@
 		<a href="http://localhost/SoundPlay/">SoundPlay</a>
 			<div class="nav-buttons">
 				<button id="logout-btn" class="navbtn child-last">Log Out</button>
-				<button id="home" class="navbtn child-first">Home</button>
+				<button id="home-btn" class="navbtn child-first">Home</button>
 			</div>				
 	</div>
 	<form method="POST" class="upload-form" enctype=multipart/form-data>
@@ -112,9 +112,12 @@
 		}
 
 
-		$target_file = $target_dir.$track_id;
+		$target_file = $target_dir.$track_id.'.mp3';
 		if (move_uploaded_file($target_temp, $target_file)) {
         	echo "<span class=\"file-success\">The file ". basename( $_FILES["file"]["name"]). " has been uploaded.</span><br>";
+        	$oldmask = umask();
+        	chmod($target_file, 0777);
+        	umask($oldmask);
     	} else {
         	echo "<span class=\"file-error\">Sorry, there was an error uploading your file.</span><br>";
     	}

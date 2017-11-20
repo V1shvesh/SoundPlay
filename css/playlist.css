@@ -33,6 +33,10 @@ body{
 	transition-duration: 0.3s;
 }
 .song:hover{
+	background-color: rgba(112,128,144,0.6);
+	color: rgba(255,255,255,0.8);
+}
+.song.selected{
 	background-color: rgb(112,128,144);
 	color: white;
 }

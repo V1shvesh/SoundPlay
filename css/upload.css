@@ -162,8 +162,9 @@ body{
 .file-error{
 	width: 80%;
 	height: 30px;
-	margin: 10px 0;
+	margin: 10px auto;
 	display: block;
+	font-family: Raleway;
 	font-size: 17px;
 	text-align: center;
 	line-height: 30px;
@@ -178,8 +179,9 @@ body{
 .file-success{
 	width: 80%;
 	height: 30px;
-	margin: 10px 0;
+	margin: 10px auto;
 	display: block;
+	font-family: Raleway;
 	font-size: 17px;
 	text-align: center;
 	line-height: 30px;

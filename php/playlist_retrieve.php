@@ -16,11 +16,6 @@
 
 	$playlist = array();
 	$sql_data = $conn->query($query);
-	if($sql_data->num_rows == 0) {
-		$result['error'] = true;
-		echo json_encode($result);
-		die();
-	}
 	while ($row = $sql_data->fetch_assoc()) {
 		array_push($playlist, $row);
 	}

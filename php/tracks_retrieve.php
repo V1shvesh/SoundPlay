@@ -20,7 +20,7 @@
 
 	$playlist_id = test_input($_POST['playlist_id']);
 
-	$query_select_songs = "SELECT title, album, artist, track_id, path FROM tracks NATURAL JOIN includes WHERE includes.playlist_id = 2";
+	$query_select_songs = "SELECT title, album, artist, track_id, path FROM tracks NATURAL JOIN includes WHERE includes.playlist_id = {$playlist_id}";
 	$sql_data = $conn->query($query_select_songs);
 	$tracks = array();
 

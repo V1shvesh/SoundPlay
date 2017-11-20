@@ -32,8 +32,15 @@ $('document').ready(function(){
 		album.val("");
 		fileInput.blur();
 	});
-	$('#home').click(function(){
+	$('#home-btn').click(function(){
 		window.open('http://localhost/Soundplay/','_self');
+	});
+	$('#logout-btn').click(function(event){
+		event.preventDefault();
+		var values = "";
+		$.post('./php/logout.php', values, function(response){
+			window.open('http://localhost/Soundplay/','_self');
+		});
 	});
 	fileUpload.mouseleave(function( event ){
 		fileInput.blur();
